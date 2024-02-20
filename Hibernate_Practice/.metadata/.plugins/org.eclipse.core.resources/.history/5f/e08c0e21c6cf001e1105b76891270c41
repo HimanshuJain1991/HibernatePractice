@@ -1,0 +1,25 @@
+package in.co.rays;
+
+import java.util.Date;
+
+public class TestUser {
+
+	public static void main(String[] args) {
+	testAdd();
+
+	}
+
+	private static void testAdd() {
+		UserDTO dto=new UserDTO();
+		dto.setId(1);
+		dto.setFirstName("Himanshu ");
+		dto.setLastName("Jain");
+		dto.setLoginId("himanshujain119@yahoo.com");
+		dto.setPassword("123");
+		dto.setDob(new Date());
+		dto.setAddress("Indore");
+		UserModel model=new UserModel();
+		model.add(dto);
+	}
+
+}

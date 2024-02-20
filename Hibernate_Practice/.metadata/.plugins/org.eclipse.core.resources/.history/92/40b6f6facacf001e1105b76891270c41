@@ -1,0 +1,45 @@
+package in.co.rays;
+
+import org.hibernate.Session;
+import org.hibernate.SessionFactory;
+import org.hibernate.Transaction;
+import org.hibernate.cfg.Configuration;
+
+public class UserModel {
+	public void add(UserDTO dto) {
+		SessionFactory sf=new Configuration().configure().buildSessionFactory();
+		Session session=sf.openSession();
+		Transaction tx=session.beginTransaction();
+		session.save(dto);
+		tx.commit();
+		session.close();
+	}
+	
+	public void update(UserDTO dto) {
+		SessionFactory sf=new Configuration().configure().buildSessionFactory();
+		Session session=sf.openSession();
+		Transaction tx=session.beginTransaction();
+		session.update(dto);
+		tx.commit();
+		session.close();
+		
+	}
+	public void delete(UserDTO dto) {
+		SessionFactory sf=new Configuration().configure().buildSessionFactory();
+		Session session=sf.openSession();
+		Transaction tx=session.beginTransaction();
+		session.delete(dto);
+		tx.commit();
+		session.close();
+	}
+	
+	public UserDTO findByPK(UserDTO dto) {
+		SessionFactory sf=new Configuration().configure().buildSessionFactory();
+		Session session=sf.openSession();
+		session.get(UserDTO.class, dto);
+		session.close();
+		return dto;
+		
+	}
+
+}

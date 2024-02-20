@@ -1,0 +1,20 @@
+package in.co.rays.dto;
+
+import java.util.Date;
+
+public class TestDTO {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+         UserDTO dto=new UserDTO();
+         dto.setId(3);
+         dto.setFirstName("Naman ");
+         dto.setLastName("Sharma");
+         dto.setLogin("Naman@gmail.com");
+         dto.setPassword("123");
+         dto.setDob(new Date());
+         dto.setAddress("Ujjain");
+         
+	}
+
+}

@@ -1,0 +1,82 @@
+package in.co.rays;
+
+import java.util.Date;
+
+public class TestUser {
+
+	public static void main(String[] args) {
+		// testAdd();
+		//testUpdate();
+		//testDelete();
+		//testFindByPk();
+		//testAuthicate();
+	}
+
+
+	private static void testAdd() {
+		UserDTO dto = new UserDTO();
+		// dto.setId(1);
+		dto.setFirstName("Amit ");
+		dto.setLastName("Bansal");
+		dto.setLoginId("Amit119@yahoo.com");
+		dto.setPassword("123");
+		dto.setDob(new Date());
+		dto.setAddress("Indore");
+		UserModel model = new UserModel();
+		model.add(dto);
+	}
+
+	private static void testUpdate() {
+		UserDTO dto = new UserDTO();
+		dto.setId(2);
+		dto.setFirstName("Ram");
+		dto.setLastName("Sharma");
+		dto.setLoginId("Ram@gmail.com");
+		dto.setPassword("123");
+		dto.setDob(new Date());
+		dto.setAddress("Ujjain");
+		UserModel model = new UserModel();
+		model.update(dto);
+
+	}
+	private static void testDelete() {
+		UserDTO dto=new UserDTO();
+		dto.setId(2);
+		UserModel model=new UserModel();
+		model.delete(dto);
+		
+		
+	}
+	private static void testFindByPk() {
+      
+		UserModel model=new UserModel();
+		UserDTO dto=model.findByPK(1);
+		System.out.println(dto.getId());
+		System.out.println(dto.getFirstName());
+		System.out.println(dto.getLastName());
+		System.out.println(dto.getLoginId());
+		System.out.println(dto.getPassword());
+		System.out.println(dto.getDob());
+	}
+	
+	private static void testAuthicate() {
+		
+		UserModel model=new UserModel();
+		UserDTO dto=model.autheticate("Ram@gmail.com","1234");
+		if(dto!=null) {
+			System.out.println(dto.getId());
+			System.out.println(dto.getFirstName());
+			System.out.println(dto.getLastName());
+			System.out.println(dto.getLoginId());
+			System.out.println(dto.getPassword());
+			System.out.println(dto.getDob());
+			System.out.println(dto.getAddress());
+		}
+		else {
+			System.out.println("Authticate Failed....");
+		}
+		
+		
+	}
+
+}

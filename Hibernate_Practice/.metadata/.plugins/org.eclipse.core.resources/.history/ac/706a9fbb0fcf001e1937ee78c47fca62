@@ -1,0 +1,21 @@
+package in.co.rays.dto;
+
+import java.util.Date;
+
+public class TestDTO {
+
+	public static void main(String[] args) {
+		UserDTO dto = new UserDTO();
+		dto.setId(1);
+		dto.setFirstName("Himanshu");
+		dto.setLastName("Jain");
+		dto.setLogin("Himanshu@gmail.com");
+		dto.setPassword("123");
+		dto.setDob(new Date());
+		dto.setAddress("Indore");
+		
+		SessionFactory sf=new Configuration().configure().buildSessionFactory();
+
+	}
+
+}
