@@ -1,0 +1,10 @@
+package in.co.rays.auction;
+
+public class TestAuction {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

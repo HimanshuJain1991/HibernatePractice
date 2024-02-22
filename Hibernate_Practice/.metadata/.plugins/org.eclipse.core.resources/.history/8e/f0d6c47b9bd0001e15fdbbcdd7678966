@@ -1,0 +1,14 @@
+package in.co.rays.oneone;
+
+public class TestOneOne {
+
+	public static void main(String[] args) {
+		Address empAddress=new Address();
+		empAddress.setId(1);
+		empAddress.setStreet("street1");
+		empAddress.setCity("Indore");
+		Employee e=new Employee();
+
+	}
+
+}

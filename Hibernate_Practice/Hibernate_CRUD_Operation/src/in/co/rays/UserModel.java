@@ -70,7 +70,7 @@ public class UserModel {
 	   Criteria criteria=session.createCriteria(UserDTO.class);
 	   if(dto!=null) {
 		   if(dto.getFirstName()!=null  && dto.getFirstName().length()>0) {
-			   criteria.add(Restrictions.ilike("firstName", dto.getFirstName()+"%"));
+			   criteria.add(Restrictions.like("firstName", dto.getFirstName()+"%"));
 		   }
 		   
 	   }
@@ -87,7 +87,7 @@ public class UserModel {
 	   SessionFactory sf=new Configuration().configure().buildSessionFactory();
 	   Session session=sf.openSession();
 	   Criteria criteria=session.createCriteria(UserDTO.class);
-	   criteria.add(Restrictions.ilike("loginId", loginId));
+	   criteria.add(Restrictions.like("loginId", loginId));
 	   criteria.add(Restrictions.like("password", password));
 	   List list=criteria.list();
 	   UserDTO dto=null;

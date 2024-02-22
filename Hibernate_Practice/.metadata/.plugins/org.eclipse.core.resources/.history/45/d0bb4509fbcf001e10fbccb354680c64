@@ -1,0 +1,17 @@
+package in.co.rays.dto;
+
+import org.hibernate.Session;
+import org.hibernate.SessionFactory;
+import org.hibernate.Transaction;
+import org.hibernate.cfg.Configuration;
+
+public class UserModel {
+	public UserDTO authticate(String login,String password) {
+		SessionFactory sf=new Configuration().configure().buildSessionFactory();
+		Session session=sf.openSession();
+        session.createQuery("from UserDTO where login=? and password=?");
+        
+		return null;
+	}
+
+}
