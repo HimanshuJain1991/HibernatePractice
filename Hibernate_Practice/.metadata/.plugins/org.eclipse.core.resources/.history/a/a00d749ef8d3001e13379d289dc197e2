@@ -1,0 +1,23 @@
+package in.co.rays.criteria;
+
+import org.hibernate.Criteria;
+import org.hibernate.Session;
+import org.hibernate.SessionFactory;
+import org.hibernate.cfg.Configuration;
+
+import in.co.rays.auction.AuctionItem;
+
+public class TestCriteriaJoin {
+
+	public static void main(String[] args) {
+		SessionFactory sf = new Configuration().configure().buildSessionFactory();
+
+		Session session = sf.openSession();
+
+		Criteria criteria = session.createCriteria(AuctionItem.class);
+		
+		
+
+	}
+
+}

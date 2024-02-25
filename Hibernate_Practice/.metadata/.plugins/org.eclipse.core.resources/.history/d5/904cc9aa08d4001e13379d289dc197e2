@@ -1,0 +1,10 @@
+package in.co.rays.cache;
+
+public class TestQuerryCache {
+
+	public static void main(String[] args) {
+		
+
+	}
+
+}

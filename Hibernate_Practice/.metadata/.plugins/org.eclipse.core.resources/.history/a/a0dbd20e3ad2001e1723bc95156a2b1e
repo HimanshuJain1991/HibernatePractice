@@ -1,0 +1,10 @@
+package in.co.rays.sql;
+
+public class TestSQLGroupBy {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}
