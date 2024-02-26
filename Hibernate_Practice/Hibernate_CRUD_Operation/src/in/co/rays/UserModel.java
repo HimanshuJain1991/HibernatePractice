@@ -74,7 +74,7 @@ public class UserModel {
 		   }
 		   
 	   }
-	   if(pageSize>0) {
+	   if(pageNo>0) {
 		   pageNo=(pageNo-1)*pageSize;
 		   criteria.setFirstResult(pageNo);
 		   criteria.setMaxResults(pageSize);
