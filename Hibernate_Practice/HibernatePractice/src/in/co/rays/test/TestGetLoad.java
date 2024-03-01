@@ -16,9 +16,9 @@ public class TestGetLoad {
 
 		Session session = sf.openSession();
 //object not found Exception
-		//UserDTO dto1 = (UserDTO) session.load(UserDTO.class, 4); 
+		UserDTO dto1 = (UserDTO) session.load(UserDTO.class, 4); 
 
-		UserDTO dto1 = (UserDTO) session.get(UserDTO.class, 4);
+		//UserDTO dto1 = (UserDTO) session.get(UserDTO.class, 4);
 
 		System.out.println(dto1);
 

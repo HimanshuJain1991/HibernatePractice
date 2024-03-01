@@ -22,7 +22,6 @@
     <fullyQualifiedTypeName name="org.hibernate.criterion.Restrictions"/>
     <fullyQualifiedTypeName name="java.lang.Iterable"/>
     <fullyQualifiedTypeName name="org.hibernate.Criteria"/>
-    <fullyQualifiedTypeName name="in.co.rays.dto.UserDTO"/>
     <fullyQualifiedTypeName name="org.hibernate.CacheMode"/>
     <fullyQualifiedTypeName name="java.util.List"/>
     <fullyQualifiedTypeName name="java.util.Iterator"/>
@@ -33,4 +32,5 @@
     <fullyQualifiedTypeName name="org.hibernate.cfg.Configuration"/>
     <fullyQualifiedTypeName name="org.hibernate.Session"/>
     <fullyQualifiedTypeName name="org.hibernate.Transaction"/>
+    <fullyQualifiedTypeName name="in.co.rays.dto.UserDTO"/>
 </qualifiedTypeNameHistroy>

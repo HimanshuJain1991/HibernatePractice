@@ -10,7 +10,7 @@ public class TestUser {
 		// testAdd();
 		//testUpdate();
 		//testDelete();
-		//testFindByPk();
+		testFindByPk();
 		//testAuthicate();
 		//testSearch();
 	}
@@ -55,7 +55,7 @@ public class TestUser {
 	private static void testFindByPk() {
       
 		UserModel model=new UserModel();
-		UserDTO dto=model.findByPK(1);
+		UserDTO dto=model.findByPK(11);
 		System.out.println(dto.getId());
 		System.out.println(dto.getFirstName());
 		System.out.println(dto.getLastName());
